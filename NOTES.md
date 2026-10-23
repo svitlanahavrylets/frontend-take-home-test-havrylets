@@ -1,3 +1,13 @@
+## Starting Repository & Setup
+
+**Repository:** Cloned from the official Zunft Frontend Assessment [template](https://github.com/Zunft-Inc/frontend-take-home-test).
+
+### Commands to Run
+1. `npm install`
+2. `npm run dev`
+3. `npm test`
+
+
 # My notes & thinking
 
 ## Bug 1: Infinite re-render loop and memory leak in polling
