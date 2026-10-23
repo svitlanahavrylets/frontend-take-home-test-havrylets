@@ -7,9 +7,9 @@ export function useTicket(ticketId: number) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  const controller = new AbortController();
-
+  
   useEffect(() => {
+    const controller = new AbortController();
 
     setLoading(true);
     setError(null);

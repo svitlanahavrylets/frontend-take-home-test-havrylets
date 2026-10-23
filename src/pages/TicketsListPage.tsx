@@ -18,13 +18,14 @@ export function TicketsListPage() {
     refetch,
   } = useTickets();
   const { users } = useUsers();
-  const pollRef = useRef<number | undefined>(undefined);
 
   // Poll for fresh data every 5 seconds
   useEffect(() => {
-    pollRef.current = window.setInterval(() => {
+    const timerId = window.setInterval(() => {
       refetch();
     }, 5000);
+
+    return () => window.clearInterval(timerId);
   }, [refetch]);
 
   const handleToggleStatus = (ticketId: number, completed: boolean) => {
